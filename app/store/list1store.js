@@ -5,7 +5,7 @@ config:{
 
   autoLoad:true,  
   sorters: 'firstName',
-  id:'filterStore',
+  id:'searchStore',
   grouper: {
             groupFn: function(record) {
                 return record.get('firstName')[0];

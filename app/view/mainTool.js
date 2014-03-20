@@ -5,7 +5,7 @@ Ext.define('test.view.mainTool',{
       
     ],
     
-   
+   xtype: 'mainTool',
     config:{
         docked:'top',
         ui:'normal',
@@ -25,12 +25,14 @@ Ext.define('test.view.mainTool',{
             ui:'action',
             qtip:'click to display filtering options',
             text:'filter',
-            id:'filter'
+            id:'filter1',
+	   action:'filters'
           },
           {xtype:'spacer'},
           {
             xtype:'button',
             ui:'action',
+	    hidden:true,
             text:'showOnMap',
 	    qtip:'click to display position on map',
             id:'showOnMap'

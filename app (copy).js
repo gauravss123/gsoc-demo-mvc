@@ -12,20 +12,15 @@ Ext.application({
       'filterTool'   ,
       'mainContainer'
     ],
-    controllers:[
-      
-      'mainTool',
-      'filterTool'
-    ],
     launch : function(){
-        /*
+        
 	Ext.Viewport.add({
 	  xtype:'mainCon'
-	});*/
-        var maintool=Ext.create('test.view.mainTool');
+	});
+        /*var maintool=Ext.create('test.view.mainTool');
 	var listsearch=Ext.create('test.view.listTool');
 	var listfilter=Ext.create('test.view.filterTool');
-	Ext.getCmp('filter1').setLeft(Ext.getCmp('mainSearch').getWidth());
+	Ext.getCmp('filter').setLeft(Ext.getCmp('mainSearch').getWidth());
         Ext.create('Ext.Container',{
           id:'contain',
           layout:'hbox',
@@ -55,6 +50,6 @@ Ext.application({
 		}
  
           ]
-  });
+  });*/
   }
 });

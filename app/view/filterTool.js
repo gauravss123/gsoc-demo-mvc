@@ -3,7 +3,7 @@ Ext.define("test.view.filterTool", {
     requires:['test.store.filterToolStore'],
     //fullscreen: true,
   
-    xtype:'filterList',
+    xtype:'filterTool',
     initialize : function() {
         this.callParent();
       this.setStore(Ext.create("test.store.filterToolStore"));
@@ -12,26 +12,39 @@ Ext.define("test.view.filterTool", {
 
 
     config:{
-	    height:Ext.Viewport.getHeight(),
-	    title:'Filters', 
-	    width:200,    
+	    
+	    id:'filterbar',
 	    hidden:true,
-            toolbar:{
-	    ui:'normal',
-            items:[
-            {xtype:'spacer'},
-            {
-            text:'Clear',
-	    ui:'action',
-	    id:'clearFilter',
-	    hidden:true,
-            align:'right'},{
-            iconCls:'delete',
-	    ui:'decline',
-	    id:'closeFilter',
-	    align:'right'}
-               ]
-            },        
+	    toolbar:{
+	      ui:'normal'
+	    },
+	   items:[
+	     
+		    { 
+		    xtype: 'toolbar', 
+		    ui:'normal',
+		    id:'sTool',
+	            docked: 'bottom', 
+		    items: [ 
+			{ 
+			  xtype: 'button', 
+			  text:'Clear',
+			  hidden:true,
+			  ui:'action',
+			  id:'clearFilter'
+			
+			},
+			{xtype:'spacer'},
+			{
+			  xtype:'button',
+			  iconCls:'delete',
+			  ui:'decline',	
+			  id:'closeFilter'
+			}
+    
+		      ] 
+		  }
+	      ]
             
             
     

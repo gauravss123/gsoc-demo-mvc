@@ -3,6 +3,7 @@ extend:'Ext.data.TreeStore',
 requires:['test.model.filterToolModel'],
     
 config:{
+id:'filterStore',
 model:'test.model.filterToolModel',
 defaultRootProperty: 'items',
  root: {
