@@ -43,6 +43,8 @@ Ext.application({
 		},
 		
                 {xtype:'panel',
+		  id:'info',
+		  html:"Select Doctor from list to display",
 		  flex:5
 		},
 		{xtype:'panel',

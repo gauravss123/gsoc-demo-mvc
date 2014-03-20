@@ -1,8 +1,8 @@
-Ext.define('test.controller.mainTool', {
+Ext.define('test.controller.listTool', {
     extend: 'Ext.app.Controller',
 config: {
         refs: {
-            filterBut: '#filter1',
+            listDocs: '#listDocs',
             
         },
         control: {

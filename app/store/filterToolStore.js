@@ -38,7 +38,13 @@ defaultRootProperty: 'items',
 		      ]
 		      
            },
-           		      {text: 'Government',leaf:true},
+           {         text: 'Type',
+		      items:[
+		              {text: 'Government',leaf:true},
+	   		      {text: 'Private',leaf:true},
+		      ]
+		      
+           }
         ]
     }
  }
