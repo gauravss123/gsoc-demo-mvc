@@ -23,7 +23,8 @@ Ext.define('test.controller.map', {
        Ext.getCmp('mapDis').setHidden(false);
     },
      closeMapFunction:function(){
-           Ext.getCmp('mapDis').setHidden(true);
+       console.log('tapped');    
+       //console.log(Ext.getCmp('mapDis').getHidden());
      }
      
   

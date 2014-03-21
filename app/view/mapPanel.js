@@ -8,19 +8,24 @@ Ext.define('test.view.mapPanel',{
 	    
 	    layout:'fit',
 	    id:'mapDis',
-	    height:400,
-	    width:400,
+	    width:Ext.Viewport.getWidth(),
+	    height:Ext.Viewport.getHeight(), 
 	    
 	    items:[
-	      {xtype:'map'}
+	      {xtype:'map'},
+	      {xtype:'button',
+		docked:'bottom',
+		ui:'action',
+		text:'Close',
+		handler:function(){
+		  Ext.getCmp('mapDis').setHidden(true);
+		}
+	      }
 	    ],
 	    hidden:true,
 	    centered: true,
 	    modal:true,
 	    hideOnMaskTap:true
-  },/*
-    initialize:function(){
-	this.callParent();
-	this.setItems();
-    }*/
-  });
+  },
+  
+});

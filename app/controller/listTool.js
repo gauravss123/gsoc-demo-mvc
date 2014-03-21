@@ -28,8 +28,9 @@ config: {
       Ext.destroy('test.view.map');
       Ext.destroy(Ext.getCmp('mapdemo'));
       Ext.destroy(Ext.getCmp('goBackToMarker'));
-      Ext.destroy(Ext.getCmp('closeMap'));
+      
       map=Ext.getCmp('maps');
+      console.log(map.getItems());
       Ext.getCmp('mapDis').remove(map);
       map=Ext.create('test.view.map');
       Ext.getCmp('mapDis').setItems(map);

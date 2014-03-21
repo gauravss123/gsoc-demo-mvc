@@ -73,25 +73,17 @@ initialize: function() {
             }
         });
 
-        toolbar =Ext.create('Ext.Toolbar', {         
+        toolbar =Ext.create('Ext.Button', {         
 	      docked:'top',
-	      items:[{
+	      ui:'action',
+	      //items:[{
+		text:'Reset Position',
 		iconCls: 'home',
 		id:'goBackToMarker',
 		handler:function(){
                  mapdemo.getMap().panTo(position);
 		}
-	      
-		
-	      },{xtype:'spacer'},
-	      {
-		xtype:'button',
-		iconCls:'delete',
-		text:'close',
-		id:'closeMap',
-		
-	      }] 
-        });
+	});
 	this.setItems(mapdemo);
 	this.setItems(toolbar);
     }
