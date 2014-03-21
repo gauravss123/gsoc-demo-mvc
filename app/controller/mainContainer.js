@@ -13,7 +13,7 @@ config: {
     },
 
     showFilter: function(){
-        console.log("FilterBut tapped");
+        
 	Ext.getCmp('filterbar').setHidden(false);
     }
 });

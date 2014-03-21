@@ -12,25 +12,50 @@ defaultRootProperty: 'items',
                 text: 'State',
                 items: [
         
-		      {text: 'Himachal Pradesh',leaf:true},
-		      {text: 'Uttar Pradesh',leaf:true},
-		      {text: 'Punjab',leaf:true},
-		      {text: 'Delhi',leaf:true},
-		      {text: 'Haryana',leaf:true},
+		      {text: 'Himachal Pradesh',
+			items:[
+			 {text: 'City7',leaf:true},
+			 {text: 'City8',leaf:true},
+			 {text: 'City9',leaf:true},
+			 {text: 'Himachal Pradesh',leaf:true},   
+			]
+			
+		      },
+		      {text: 'Uttar Pradesh',
+			items:[
+			 {text: 'City10',leaf:true},		  
+	   		 {text: 'Uttar Pradesh',leaf:true},
+			]
+			
+		      },
+		      {text: 'Punjab',
+			items:[
+			  {text: 'City3',leaf:true},
+			  {text: 'City4',leaf:true},
+	   		  {text: 'Punjab',leaf:true},
+			]
+			
+		      },
+		      {text: 'Delhi',
+			items:[
+			  {text: 'City1',leaf:true},
+	   		  {text: 'City2',leaf:true},
+	   		  {text: 'Delhi',leaf:true},
+			]
+			
+		      },
+		      {text: 'Haryana',
+			items:[
+			  {text: 'City5',leaf:true},
+			  {text: 'City6',leaf:true},
+	   		  {text: 'Haryana',leaf:true},
+			]
+			
+			
+		      },
 	
 		    ]
 	    },
-	   {        text:'City',
-                    items: [
-                              {text: 'City1',leaf:true},
-	   		      {text: 'City2',leaf:true},
-	   		      {text: 'City3',leaf:true},
-	   		      {text: 'City4',leaf:true},
-	   		      {text: 'City5',leaf:true},
-	   		      {text: 'City6',leaf:true},
-	   		      {text: 'City7',leaf:true},
-                        ]
-            },
            {         text: 'Services',
 		      items:[
 		              {text: 'Pharmacy',leaf:true},

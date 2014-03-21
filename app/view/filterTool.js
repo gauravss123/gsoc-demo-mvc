@@ -12,10 +12,14 @@ Ext.define("test.view.filterTool", {
 
 
     config:{
-	    
+	    title:'filters',
 	    id:'filterbar',
-	    hidden:true,
+	    width:200,
+	   hidden:true,
+	   height:Ext.Viewport.getHeight(),
+	   
 	    toolbar:{
+	      title:'back',
 	      ui:'normal'
 	    },
 	   items:[

@@ -1,5 +1,5 @@
 Ext.define('test.view.map',{    
-  extend:'Ext.Map',  
+  extend:'Ext.Container',  
   requires: [
         'Ext.Map',
         'Ext.Button',
@@ -10,20 +10,20 @@ Ext.define('test.view.map',{
     ],
  xtype:'map',
  config: {
+   
+   height:400,
+   wifth:400,
    layout:'fit',
-   id:'maps'
-   
-   
 },
 initialize: function() {
       this.callParent();
-	//test.utils.Global.setPosition(new google.maps.LatLng(37.44885, -122.158592));   
-        var position = test.utils.Global.getPosition();
-	console.log(position+'view map');
+/*
+        var position = new google.maps.LatLng(37.44885, -122.158592);  //Sencha HQ
+console.log(position);
          var   infowindow = new google.maps.InfoWindow({
-                content: test.utils.Global.getTitle(),
+                content: 'Sencha HQ'
             });
-
+console.log(infowindow);
             //Tracking Marker Image
            var image = new google.maps.MarkerImage(
                 'resources/images/point.png',
@@ -31,20 +31,19 @@ initialize: function() {
                 new google.maps.Point(0, 0),
                 new google.maps.Point(16, 31)
             );
-
+console.log(image);
             var shadow = new google.maps.MarkerImage(
                 'resources/images/shadow.png',
                 new google.maps.Size(64, 52),
                 new google.maps.Point(0, 0),
                 new google.maps.Point(-5, 42)
             );
-
-
+console.log(shadow);
+*/
 
          var mapdemo = Ext.create('Ext.Map', {
-	   id:'mapdemo',
             mapOptions : {
-                center : position,  //nearby San Fran
+                center : new google.maps.LatLng(37.381592, -122.135672),  //nearby San Fran
                 zoom : 12,
                 mapTypeId : google.maps.MapTypeId.ROADMAP,
                 navigationControl: true,
@@ -53,11 +52,26 @@ initialize: function() {
                 }
             },
 
+            plugins : [
+                new Ext.plugin.google.Tracker({
+                    trackSuspended: true,   //suspend tracking initially
+                    allowHighAccuracy: false,
+                    marker: new google.maps.Marker({
+                        position: position,
+                        title: 'My Current Location',
+                        shadow: shadow,
+                        icon: image
+                    })
+                }),
+                new Ext.plugin.google.Traffic()
+            ],
+            
+
             listeners: {
                 maprender: function(comp, map) {
                     var marker = new google.maps.Marker({
                         position: position,
-                        title : test.utils.Global.getTitle(),
+                        title : 'Sencha HQ',
                         map: map
                     });
 
@@ -67,32 +81,20 @@ initialize: function() {
 
                     setTimeout(function() {
                         map.panTo(position);
-                    }, 5000);
+                    }, 1000);
                 }
 
             }
         });
 
-        toolbar =Ext.create('Ext.Toolbar', {         
-	      docked:'top',
-	      items:[{
-		iconCls: 'home',
-		id:'goBackToMarker',
-		handler:function(){
-                 mapdemo.getMap().panTo(position);
-		}
-	      
-		
-	      },{xtype:'spacer'},
-	      {
-		xtype:'button',
-		iconCls:'delete',
-		text:'close',
-		id:'closeMap',
-		
-	      }] 
+        map =Ext.create('Ext.Panel', {
+            //fullscreen: true,
+	    center:true,
+	    width:400,
+	    height:400,
+            layout: 'fit',
+            items: [mapdemo]
         });
-	this.setItems(mapdemo);
-	this.setItems(toolbar);
+	this.setItems(map);
     }
 });

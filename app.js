@@ -1,62 +1,39 @@
 Ext.application({
   name:'test',  
+  position: 'gmap variable',
+   setPositoin: function(arg) {
+        this.position= arg;
+    },
+getPostition: function() {
+        return this.position;
+    },
   requires: [
       
       'Ext.Panel',
-      'Ext.Spacer'
+      'Ext.Spacer',
+      'test.utils.Global'
       
     ],
     views:[
       'mainTool',
       'listTool',
       'filterTool'   ,
-      'mainContainer'
+      'mainContainer',
+      'map',
+      'mapPanel'
     ],
     controllers:[
       
       'mainTool',
-      'filterTool'
+      'filterTool',
+      'listTool',
+      'map'
+      
     ],
     launch : function(){
-        /*
-	Ext.Viewport.add({
-	  xtype:'mainCon'
-	});*/
-        var maintool=Ext.create('test.view.mainTool');
-	var listsearch=Ext.create('test.view.listTool');
-	var listfilter=Ext.create('test.view.filterTool');
-	Ext.getCmp('filter1').setLeft(Ext.getCmp('mainSearch').getWidth());
-        Ext.create('Ext.Container',{
-          id:'contain',
-          layout:'hbox',
-   
-          fullscreen:true,
-          items:[
-                maintool,
-		{xtype:'panel',
-		  flex:1,
-		   layout:'fit',
-		   //modal:true,
-		   items:[
-		  listsearch]
-		  
-		},
-		
-                {xtype:'panel',
-		  id:'info',
-		  html:"Select Doctor from list to display",
-		  flex:5
-		},
-		{xtype:'panel',
-		  layout:'fit',
-		  flex:1,
-		    modal:true,
-		   items:[
-		  listfilter]
-		  
-		}
- 
-          ]
-  });
+      
+        map = Ext.create('test.view.mapPanel');
+	maintool=Ext.create('test.view.mainContainer');
+	Ext.Viewport.add(map);
   }
 });

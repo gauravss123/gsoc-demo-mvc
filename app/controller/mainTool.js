@@ -9,6 +9,7 @@ config: {
 	    backBut:'#back',
 	    homeBut:'#home',
 	    search:'#mainSearch',
+	   
             
         },
         control: {
@@ -30,9 +31,9 @@ config: {
     
 	
     }},
-
+    
     showFilter: function(){
-        console.log(this);
+        
 	Ext.getCmp('filterbar').setHidden(false);
 	if(Ext.getCmp('listDocs').getStore().isFiltered())
 	{Ext.getCmp('clearFilter').setHidden(false);
