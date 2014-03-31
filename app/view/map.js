@@ -67,7 +67,7 @@ initialize: function() {
 
                     setTimeout(function() {
                         map.panTo(position);
-                    }, 5000);
+                    }, 4000);
                 }
 
             }

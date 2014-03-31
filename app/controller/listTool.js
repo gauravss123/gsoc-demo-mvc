@@ -13,8 +13,9 @@ config: {
     },
 
     showDetail: function(listDocs,index,target,record){
+      var body2 = "Doctor Name : Dr."+record.get('firstName')+" "+record.get('lastName')+" State :"+record.get('State')+" City :"+record.get('City')+" Pharmacy :"+record.get('Pharmacy')+" Ambulance :"+record.get('Ambulance')+" Government Employee:"+record.get('Government');  
       Ext.getCmp('clearFilter').setUi('action');
-        Ext.getCmp('docName').setValue('Dr. '+record.get('firstName')+' '+record.get('lastName'));
+      Ext.getCmp('docName').setValue('Dr. '+record.get('firstName')+' '+record.get('lastName'));
       Ext.getCmp('docCity').setValue(record.get('City'));
       Ext.getCmp('docState').setValue(record.get('State'));
     
@@ -35,7 +36,7 @@ config: {
 	Ext.getCmp('docGovEmp').setValue('No');
       Ext.getCmp('docServOff').setValue(serv);
       Ext.getCmp('docInfo').setHidden(false);
-      Ext.getCmp('info').setHtml(body);
+      
       Ext.getCmp('showOnMap').setUi('action').setHidden(false);
       var lat = record.get('lat');
       var long = record.get('long');
