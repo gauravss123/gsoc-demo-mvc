@@ -9,7 +9,9 @@ Ext.define('test.view.mainTool',{
     config:{
         docked:'top',
         ui:'normal',
-       
+       border: 5,
+       style: 'border-color: black; border-style: solid;',
+    
        
         items:[
           {

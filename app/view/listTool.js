@@ -17,6 +17,9 @@ Ext.define("test.view.listTool", {
     config:{
       grouped:true,
       id:'listDocs',
+      border: '0 5 5 5 ',
+      style: 'border-color: black; border-style: solid;',
+    
 	   //height:Ext.Viewport.getHeight(),
 	   //width:200,
 	   itemTpl: '<div class="contact">{firstName} <strong>{lastName}</strong></div>',
