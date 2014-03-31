@@ -14,13 +14,32 @@ config: {
 
     showDetail: function(listDocs,index,target,record){
       Ext.getCmp('clearFilter').setUi('action');
-      rec= record.get('firstName');
-      var body = "Doctor Name : Dr."+record.get('firstName')+" "+record.get('lastName')+"<br>State :"+record.get('State')+"<br>City :"+record.get('City')+"<br>Pharmacy :"+record.get('Pharmacy')+"<br>Ambulance :"+record.get('Ambulance')+"<br>Government Employee:"+record.get('Government');  
-      var body2 = "Doctor Name : Dr."+record.get('firstName')+" "+record.get('lastName')+" State :"+record.get('State')+" City :"+record.get('City')+" Pharmacy :"+record.get('Pharmacy')+" Ambulance :"+record.get('Ambulance')+" Government Employee:"+record.get('Government');  
+        Ext.getCmp('docName').setValue('Dr. '+record.get('firstName')+' '+record.get('lastName'));
+      Ext.getCmp('docCity').setValue(record.get('City'));
+      Ext.getCmp('docState').setValue(record.get('State'));
+    
+      var serv = '';
+      if(record.get('Pharmacy')=='y')
+	serv=serv+'Pharmacy, ';
+	
+      if(record.get('Ambulance')=='y')
+      	serv=serv+'Ambulance, ';
+      
+      if (serv=='')
+	serv='None';
+      else
+	serv=serv.slice(0,-2);
+      if(record.get('Government')=='y')
+      	Ext.getCmp('docGovEmp').setValue('Yes');
+      else
+	Ext.getCmp('docGovEmp').setValue('No');
+      Ext.getCmp('docServOff').setValue(serv);
+      Ext.getCmp('docInfo').setHidden(false);
       Ext.getCmp('info').setHtml(body);
       Ext.getCmp('showOnMap').setUi('action').setHidden(false);
       var lat = record.get('lat');
       var long = record.get('long');
+
       position = new google.maps.LatLng(lat,long);
       console.log(position);
       test.utils.Global.setPosition(position);

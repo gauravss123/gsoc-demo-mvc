@@ -19,7 +19,62 @@ config:{
   Ext.getCmp('filter1').setLeft(Ext.getCmp('mainSearch').getWidth());
   var listsearch = Ext.create('test.view.listTool');  
   var filterlist= Ext.create('test.view.filterTool');
-  var info= Ext.create('Ext.Panel',{id:'info',flex:5});
+    var info= Ext.create('Ext.Panel',{
+    id:'info',
+    styleHtmlContent:true,
+    flex:5,
+    items:[
+      {			
+            xtype: 'fieldset',
+            title: 'Doctor Information',
+	    hidden:true,
+	    id:'docInfo',
+            items: [
+                {
+                    xtype: 'textfield',
+                    label: "Doctor's Name",
+		    id:'docName',
+                    
+                    readOnly:true,
+                    
+                },
+		{
+                    xtype: 'textfield',
+                    label: "State",
+		    id:'docState',
+                    
+                    readOnly:true,
+                    
+                },
+		{
+                    xtype: 'textfield',
+                    label: "City",
+		    id:'docCity',
+                    
+                    readOnly:true,
+                    
+                },
+		{
+                    xtype: 'textfield',
+                    label: "Services Offered",
+		    id:'docServOff',
+                    
+                    readOnly:true,
+                    
+                }, 	
+		{
+                    xtype: 'textfield',
+                    label: "Government Employee",
+		    id:'docGovEmp',
+                    
+                    readOnly:true,
+                    
+                },
+	    ] 	
+    
+	  }]
+        });
+  
   var list = Ext.create('Ext.Panel',{
     flex:1,
     
