@@ -14,11 +14,8 @@ Ext.define("test.view.filterTool", {
     config:{
 	    title:'filters',
 	    id:'filterbar',
-	    width:200,
+	    //width:200,
 	    hidden:true,
-	   border: '0 5 5 5 ',
-	    style: 'border-color: black; border-style: solid;',
-    
 	   
 	   height:Ext.Viewport.getHeight(),
 	   

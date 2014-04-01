@@ -20,7 +20,9 @@ getPostition: function() {
       'filterTool'   ,
       'mainContainer',
       'map',
-      'mapPanel'
+      'infoDisplay',
+      'mapPanel',
+      'sortList'
     ],
     controllers:[
       
