@@ -1,6 +1,6 @@
 Ext.define('test.controller.listTool', {
     extend: 'Ext.app.Controller',
-    requires: ['test.view.infoDisplay'],
+   
 config: {
         refs: {
             listDocs: '#listDocs',

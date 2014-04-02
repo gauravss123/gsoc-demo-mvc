@@ -39,10 +39,6 @@ config: {
 	      store.filter('Government','n');
       else if(Ext.Array.contains(state,rec))
 	    {
-	      store.setSorters('City');
-	      store.setGrouper( function (item) {
-                    return item.get('City');
-                } );
 	      store.filter('State',rec);
 	      
 	    }

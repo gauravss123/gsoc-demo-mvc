@@ -1,7 +1,5 @@
 Ext.define('test.controller.map', {
     extend: 'Ext.app.Controller',
- requires:['Ext.Map',
-	  'Ext.Panel'],
   config:{
     refs: {
             

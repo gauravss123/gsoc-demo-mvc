@@ -29,11 +29,12 @@ getPostition: function() {
       'mainTool',
       'filterTool',
       'listTool',
-      'map'
+      'map',
+      'sortList'
       
     ],
     launch : function(){
-      
+	Ext.fly('appLoadingIndicator').destroy();
         map = Ext.create('test.view.mapPanel');
 	maintool=Ext.create('test.view.mainContainer');
 	Ext.Viewport.add(map);

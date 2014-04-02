@@ -1,8 +1,6 @@
 Ext.define('test.controller.mainTool', {
     extend: 'Ext.app.Controller',
-    requires:['Ext.Panel',
-      'Ext.data.Store'
-    ],
+    
 config: {
         refs: {
             filterBut: '#filter1',

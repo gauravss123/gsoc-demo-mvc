@@ -1,8 +1,8 @@
 Ext.define('test.view.sortList',{
  extend:'Ext.form.Panel',
- requires:['Ext.form.Toggle',
+ requires:['Ext.field.Radio',
 	    'Ext.form.FieldSet'],
-//    fullscreen: true,
+
 
     xtype:'sort',
     initialize : function() {
@@ -13,38 +13,50 @@ Ext.define('test.view.sortList',{
     config:{items:[
       {
     xtype:'fieldset',
-    title: 'Sort Values',
+    title: 'Group By',
     id:'sort',
     items:[
     
     {
-    xtype: 'togglefield',
-    id: 'sortfirstName',
-    value:1,
+    xtype: 'radiofield',
+    id: 'sortFirstName',
+    checked:true,
     label: 'First Name',
     labelWrap:true,
-    labelWidth: '50%'
+    labelWidth:'50%',
+    name:'group'
+    
+    
     },
     {
-    xtype: 'togglefield',
-    id: 'sortlastName',
+    xtype: 'radiofield',
+    id: 'sortLastName',
     label: 'Last Name',
     labelWrap:true,
-    labelWidth: '50%'
+    labelWidth:'50%',
+    name:'group'
+    
+    
     },
     {
-    xtype: 'togglefield',
+    xtype: 'radiofield',
     id: 'sortState',
     label: 'State',
     labelWrap:true,
-    labelWidth: '50%'
+    labelWidth:'50%',
+    name:'group'
+    
+    
     },
     {
-    xtype: 'togglefield',
+    xtype: 'radiofield',
     id: 'sortCity',
     label: 'City',
     labelWrap:true,
-    labelWidth: '50%'
+    labelWidth:'50%',
+    name:'group'
+    
+    
     }  
     ]
 	

@@ -53,10 +53,11 @@ config:{
     sort,
     filterlist]
   })
-  this.setItems(maintool);
-  this.setItems(list);
-  this.setItems(info);
-  this.setItems(filter);
+  
+  this.add(maintool);
+  this.add(list);
+  this.add(info);
+  this.add(filter);
   
     
   }

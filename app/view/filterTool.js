@@ -12,7 +12,7 @@ Ext.define("test.view.filterTool", {
 
 
     config:{
-	    title:'filters',
+	   
 	    id:'filterbar',
 	    //width:200,
 	    hidden:true,
