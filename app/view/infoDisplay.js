@@ -1,5 +1,6 @@
 Ext.define("test.view.infoDisplay", {
-    extend:'Ext.form.FieldSet',
+    extend:'Ext.Panel',
+    requires:['Ext.form.FieldSet'],
 //    fullscreen: true,
 
     xtype:'infodis',
@@ -11,8 +12,12 @@ Ext.define("test.view.infoDisplay", {
     
 
     config:{
+      id:'docInfoPanel',
+      hidden:true,
+      items:[{
+      xtype:'fieldset',
       title: 'Doctor Information',
-	    hidden:true,
+	    //hidden:true,
 	    id:'docInfo',
             
       items:[
@@ -56,8 +61,8 @@ Ext.define("test.view.infoDisplay", {
                     readOnly:true,
                     
                 },
+      ]}
     ]
-        
     },
 
 });

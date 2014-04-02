@@ -20,17 +20,19 @@ config:{
   this.callParent();
   var maintool = Ext.create('test.view.mainTool');  
   var inf =Ext.create('test.view.infoDisplay');  
+  var intro =Ext.create('test.view.intro');  
   var sort= Ext.create('test.view.sortList');
   Ext.getCmp('filter1').setLeft(Ext.getCmp('mainSearch').getWidth());
   var listsearch = Ext.create('test.view.listTool');  
   var filterlist= Ext.create('test.view.filterTool');
-    var info= Ext.create('Ext.Panel',{
+    var info= Ext.create('Ext.Container',{
     id:'info',
     styleHtmlContent:true,
     flex:5,
+    layout:'card',
     
-    items:[
-      		
+    items:[	
+	      intro,
               inf
 	    ]
         });

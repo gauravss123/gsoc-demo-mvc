@@ -36,7 +36,7 @@ config: {
       else
 	Ext.getCmp('docGovEmp').setValue('No');
       Ext.getCmp('docServOff').setValue(serv);
-      Ext.getCmp('docInfo').setHidden(false);
+      Ext.getCmp('docInfoPanel').setHidden(false);
       
       Ext.getCmp('showOnMap').setUi('action').setHidden(false);
       var lat = record.get('lat');

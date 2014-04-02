@@ -22,7 +22,8 @@ getPostition: function() {
       'map',
       'infoDisplay',
       'mapPanel',
-      'sortList'
+      'sortList',
+      'intro'
     ],
     controllers:[
       

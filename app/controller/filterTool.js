@@ -31,10 +31,6 @@ config: {
       store = Ext.getCmp('listDocs').getStore();
       var state= ["Himachal Pradesh","Uttar Pradesh","Delhi","Haryana","Punjab"];
       var city = ["City 1","City2","City3","City4","City5","City6","City7","City8","City9","City10"];
-      store.setSorters('firstName');
-      store.setGrouper( function (item) {
-             return item.get('firstName')[0];
-                } );
       if(rec==("Private"))
 	      store.filter('Government','n');
       else if(Ext.Array.contains(state,rec))
