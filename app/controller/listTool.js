@@ -43,7 +43,6 @@ config: {
       var long = record.get('long');
 
       position = new google.maps.LatLng(lat,long);
-      console.log(position);
       test.utils.Global.setPosition(position);
       test.utils.Global.setTitle(body2);
       Ext.destroy('test.view.map');
@@ -51,10 +50,9 @@ config: {
       Ext.destroy(Ext.getCmp('goBackToMarker'));
       
       map=Ext.getCmp('maps');
-      console.log(map.getItems());
       Ext.getCmp('mapDis').remove(map);
       map=Ext.create('test.view.map');
-      Ext.getCmp('mapDis').setItems(map);
+      
     
       
       

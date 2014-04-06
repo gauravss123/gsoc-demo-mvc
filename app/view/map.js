@@ -1,14 +1,6 @@
 Ext.define('test.view.map',{    
   extend:'Ext.Map',  
-  requires: [
-        'Ext.Map',
-        'Ext.Button',
-        'Ext.Panel',
-        'Ext.Toolbar',
-        'Ext.plugin.google.Traffic',
-        'Ext.plugin.google.Tracker'
-    ],
- xtype:'map',
+  xtype:'map',
  config: {
    layout:'fit',
    id:'maps'

@@ -3,7 +3,9 @@ Ext.define('test.utils.Global', {
     alias : 'widget.global',
     config : {
             position: new google.maps.LatLng(37.44885, -122.158592),
-            title:'Title'
+            title:'Title',
+	    filterListItem:[],
+	    filterListItemField:[]
     },
     constructor: function(config) {
         this.initConfig(config);

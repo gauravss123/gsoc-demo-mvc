@@ -11,8 +11,10 @@ getPostition: function() {
       
       'Ext.Panel',
       'Ext.Spacer',
-      'test.utils.Global'
-      
+      'Ext.form.FieldSet',
+      'test.utils.Global',
+      'test.utils.Global',
+      'Ext.field.Radio',
     ],
     views:[
       'mainTool',
@@ -23,7 +25,8 @@ getPostition: function() {
       'infoDisplay',
       'mapPanel',
       'sortList',
-      'intro'
+      'intro',
+      'filterList'
     ],
     controllers:[
       

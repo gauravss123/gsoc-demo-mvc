@@ -1,7 +1,5 @@
 Ext.define("test.view.infoDisplay", {
     extend:'Ext.Panel',
-    requires:['Ext.form.FieldSet'],
-//    fullscreen: true,
 
     xtype:'infodis',
     initialize : function() {

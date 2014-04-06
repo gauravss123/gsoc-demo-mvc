@@ -1,8 +1,6 @@
 Ext.define('test.view.sortList',{
  extend:'Ext.form.Panel',
- requires:['Ext.field.Radio',
-	    'Ext.form.FieldSet'],
-
+ 
 
     xtype:'sort',
     initialize : function() {
@@ -10,7 +8,14 @@ Ext.define('test.view.sortList',{
      },
     
 
-    config:{items:[
+    config:{flex:1,
+      border: 1,
+      style: 'border-color: black; border-style: solid;',
+          scrollable: {
+    direction: 'vertical',
+    directionLock: true
+    },	
+    items:[
       {
     xtype:'fieldset',
     title: 'Group By',
@@ -60,6 +65,15 @@ Ext.define('test.view.sortList',{
     }  
     ]
 	
+    },
+    {
+    xtype:'fieldset',
+    title: 'Applied Filters',
+    id:'filterListField',
+    hidden:true,
+    autoDestroy:true
+    
+    	
       }
     ]
   }
