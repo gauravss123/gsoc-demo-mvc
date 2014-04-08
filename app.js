@@ -33,7 +33,7 @@ getPostition: function() {
       'main',
       'addoc',
       'addocList'
-      //'services'
+      
     ],
     controllers:[
       'sortList',		      
@@ -49,9 +49,9 @@ getPostition: function() {
     ],
     launch : function(){
 	Ext.fly('appLoadingIndicator').destroy();
-	map = Ext.create('test.view.map');
+	map = Ext.create('test.view.mapPanel');
 	docadd=Ext.create('test.view.addoc');
-	maintool=Ext.create('test.view.main');
+	maintool=Ext.create('test.view.mainContainer');
 	Ext.Viewport.add(map);
 	Ext.Viewport.add(docadd);
 	

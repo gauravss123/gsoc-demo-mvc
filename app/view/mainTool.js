@@ -34,7 +34,7 @@ Ext.define('test.view.mainTool',{
           {
             xtype:'button',
             ui:'action',
-	    hidden:true,
+	    //hidden:true,
             text:'showOnMap',
 	    qtip:'click to display position on map',
             id:'showOnMap'
