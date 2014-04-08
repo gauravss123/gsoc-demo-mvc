@@ -10,6 +10,7 @@ requires : [
   'Ext.Menu',
   'Ext.form.FieldSet'
 ],
+id:'maincon',
 xtype: 'mainCon',
 config:{
   layout:'hbox',
@@ -62,6 +63,7 @@ config:{
   this.add(filter);
   
     
-  }
+  },
+  //config:{hidden:true}
   
 });

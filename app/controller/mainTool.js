@@ -4,8 +4,8 @@ Ext.define('test.controller.mainTool', {
 config: {
         refs: {
             filterBut: '#filter1',
-	    backBut:'#back',
-	    homeBut:'#home',
+	    tutBut:'#tutMain',
+	    homeBut:'#homeMain',
 	    search:'#mainSearch',
 	   
             
@@ -15,8 +15,8 @@ config: {
                 tap: "showFilter"
             },
         
-            backBut: {
-                tap: "showBack"
+            tutBut: {
+                tap: "tutor"
             },
     
             homeBut: {
@@ -39,15 +39,8 @@ config: {
 	}
       
     },
-    showBack: function(){
-       
-	Ext.create('Ext.Panel',{
-	  modal:true,
-	  hidden:true,
-	  hideOnMaskTap: true,
-	  html:'Back Button'
-	}).showBy(Ext.getCmp('back')); 
-      
+    tutor: function(){
+       Ext.getCmp('mainView').setActiveItem(Ext.getCmp('tutorial')); 
     },
     onSearchKeyUp: function(field) {
             var value = field.getValue();
@@ -85,13 +78,7 @@ config: {
         }
     },
     showHome: function(){
-        
-	Ext.create('Ext.Panel',{
-	  modal:true,
-	  hidden:true,
-	  hideOnMaskTap: true,
-	  html:'Home Button'
-	}).showBy(Ext.getCmp('home'));
+        Ext.getCmp('mainView').setActiveItem(Ext.getCmp('homeView')); 
     },   
     onSearchClearIconTap: function() {
        

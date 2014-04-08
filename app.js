@@ -27,8 +27,9 @@ getPostition: function() {
       'mapPanel',
       'sortList',
       'intro',
-      //'home',
-        'tut',
+      'home',
+      'tut',
+      'main'
       //'services'
     ],
     controllers:[
@@ -38,13 +39,14 @@ getPostition: function() {
       'listTool',
       'map',
       'sortList',
-      'tut'
+      'tut',
+      'home'
       
     ],
     launch : function(){
 	Ext.fly('appLoadingIndicator').destroy();
-        map = Ext.create('test.view.tut');
-	//maintool=Ext.create('test.view.mainContainer');
+        map = Ext.create('test.view.mapPanel');
+	maintool=Ext.create('test.view.main');
 	Ext.Viewport.add(map);
   }
 });

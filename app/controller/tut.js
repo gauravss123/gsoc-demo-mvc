@@ -41,7 +41,7 @@ config: {
 	   skip: {
                 
 		tap:function(){
-		  this.change(3);
+		  Ext.getCmp('mainView').setActiveItem(Ext.getCmp('maincon')); 
 		}
 
 			
@@ -49,20 +49,10 @@ config: {
 	   home: {
                 
 		tap: function(){
-		  this.change(4);
+		  Ext.getCmp('mainView').setActiveItem(Ext.getCmp('homeView')); 
 		}
 	   },
-	   back: {
-                
-		tap: function(){
-		  this.change(5);
-		}
 
-
-
-
-		
-            },
 	}
     }
 });

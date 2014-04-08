@@ -25,7 +25,8 @@ Ext.define('test.view.tut',{
 	    ui:'back',
 	    top:'50%',
 	    iconCls:'arrow_left',
-	    disabled:true
+	    disabled:true,
+	    padding:0
 	 })
 	
 	var next= Ext.create('Ext.Button',{
@@ -36,17 +37,12 @@ Ext.define('test.view.tut',{
 	    right:0,
 	    ui:'forward',
 	    top:'50%',
+	    padding:0
 	    
 	 })
 	var tool=Ext.create('Ext.Toolbar',{
 	  docked:'top',
 	  items:[
-	    {
-	      xtype:'button',
-	      id:'carback',
-	      ui:'back',
-	      text:'back'
-	    },
 	    {xtype:'spacer'},
 	    {
 	      xtype:'button',
@@ -77,6 +73,7 @@ Ext.define('test.view.tut',{
 
     config:{
     fullscreen:true,
-    layout:'fit'
+    layout:'fit',
+    hidden:true
   }
 });

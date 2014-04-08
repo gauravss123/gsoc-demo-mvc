@@ -42,9 +42,8 @@ Ext.define('test.view.mainTool',{
           {
             xtype:'button',
             ui:'action',
-            iconCls:'arrow_left',
-	    qtip:'click to go back to previous screen',
-            id:'back'
+	    text:'Help',
+            id:'tutMain'
           },
           {
                 xtype:'button',
@@ -52,7 +51,7 @@ Ext.define('test.view.mainTool',{
                 iconCls:'home',
 	        
 	        qtip:'click to go to home screen',
-                id:'home'
+                id:'homeMain'
           }
    
         ]
