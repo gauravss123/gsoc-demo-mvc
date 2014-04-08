@@ -51,7 +51,7 @@ getPostition: function() {
 	Ext.fly('appLoadingIndicator').destroy();
 	map = Ext.create('test.view.mapPanel');
 	docadd=Ext.create('test.view.addoc');
-	maintool=Ext.create('test.view.mainContainer');
+	maintool=Ext.create('test.view.main');
 	Ext.Viewport.add(map);
 	Ext.Viewport.add(docadd);
 	
