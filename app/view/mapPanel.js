@@ -1,6 +1,8 @@
 Ext.define('test.view.mapPanel',{
   extend:'Ext.Panel',
-  
+  requires:['Ext.Map',
+    'test.view.map'
+  ],
   xtype:'mapDis',
   config:{
 	    

@@ -1,6 +1,9 @@
 Ext.define('test.view.mainTool',{
  
     extend: 'Ext.Toolbar',
+    requires:['Ext.field.Search'
+      
+    ],
     
    xtype: 'mainTool',
     config:{

@@ -2,204 +2,22 @@ Ext.define("test.store.list1store", {
 extend:'Ext.data.Store',
 requires:['test.model.list1model'],
 config:{
-
+  model:'test.model.list1model',
   autoLoad:true,  
   sorters: 'firstName',
   id:'searchStore',
+  defaultRootProperty:true,
   grouper: {
             groupFn: function(record) {
                 return record.get('firstName')[0];
             }},
-data: [{
-                    Pharmacy: 'n',
-                    Ambulance: 'n',
-                    Government: 'y',
-                    State: 'Delhi',
-                    City: 'City1',
-                    lat: '28.66435',
-                    long: '77.16546',
-                    firstName: 'Tommy',
-                    lastName: 'Maintz'
-                }, {
-                    Pharmacy: 'y',
-                    Ambulance: 'n',
-                    Government: 'y',
-                    State: 'Delhi',
-                    City: 'City1',
-                    lat: '28.63214',
-                    long: '77.13265',
-                    firstName: 'Rob',
-                    lastName: 'Dougan'
-                }, {
-                    Pharmacy: 'y',
-                    Ambulance: 'n',
-                    Government: 'y',
-                    State: 'Delhi',
-                    City: 'City2',
-                    lat: '28.59568',
-                    long: '77.26545',
-                    firstName: 'Ed',
-                    lastName: 'Avins'
-                }, {
-                    Pharmacy: 'n',
-                    Ambulance: 'n',
-                    Government: 'y',
-                    State: 'Delhi',
-                    City: 'City2',
-                    lat: '28.60898',
-                    long: '77.23654',
-                    firstName: 'Jamie',
-                    lastName: 'Avins'
-                }, {
-                    Pharmacy: 'n',
-                    Ambulance: 'n',
-                    Government: 'y',
-                    State: 'Punjab',
-                    City: 'City3',
-                    lat: '28.65432',
-                    long: '77.13564',
-                    firstName: 'Dave',
-                    lastName: 'Dougan'
-                }, {
-                    Pharmacy: 'n',
-                    Ambulance: 'n',
-                    Government: 'y',
-                    State: 'Punjab',
-                    City: 'City3',
-                    lat: '28.67156',
-                    long: '77.19876',
-                    firstName: 'Abraham',
-                    lastName: 'Elias'
-                }, {
-                    Pharmacy: 'y',
-                    Ambulance: 'y',
-                    Government: 'y',
-                    State: 'Punjab',
-                    City: 'City4',
-                    lat: '28.63546',
-                    long: '77.28165',
-                    firstName: 'Jacky',
-                    lastName: 'Ngyuyen'
-                }, {
-                    Pharmacy: 'y',
-                    Ambulance: 'y',
-                    Government: 'y',
-                    State: 'Punjab',
-                    City: 'City4',
-                    lat: '28.60654',
-                    long: '77.23156',
-                    firstName: 'Jay',
-                    lastName: 'Ngyuyen'
-                }, {
-                    Pharmacy: 'y',
-                    Ambulance: 'y',
-                    Government: 'n',
-                    State: 'Punjab',
-                    City: 'City4',
-                    lat: '28.65432',
-                    long: '77.11465',
-                    firstName: 'Jay',
-                    lastName: 'Robinson'
-                }, {
-                    Pharmacy: 'y',
-                    Ambulance: 'y',
-                    Government: 'n',
-                    State: 'Haryana',
-                    City: 'City5',
-                    lat: '28.59264',
-                    long: '77.32465',
-                    firstName: 'Rob',
-                    lastName: 'Avins'
-                }, {
-                    Pharmacy: 'n',
-                    Ambulance: 'y',
-                    Government: 'n',
-                    State: 'Haryana',
-                    City: 'City5',
-                    lat: '28.61659',
-                    long: '77.10926',
-                    firstName: 'Ed',
-                    lastName: 'Dougan'
-                }, {
-                    Pharmacy: 'n',
-                    Ambulance: 'y',
-                    Government: 'n',
-                    State: 'Haryana',
-                    City: 'City5',
-                    lat: '28.63259',
-                    long: '77.16876',
-                    firstName: 'Jamie',
-                    lastName: 'Poulden'
-                }, {
-                    Pharmacy: 'y',
-                    Ambulance: 'y',
-                    Government: 'n',
-                    State: 'Haryana',
-                    City: 'City6',
-                    lat: '28.66265',
-                    long: '77.19872',
-                    firstName: 'Dave',
-                    lastName: 'Spencer'
-                }, {
-                    Pharmacy: 'y',
-                    Ambulance: 'y',
-                    Government: 'n',
-                    State: 'Uttar Pradesh',
-                    City: 'City10',
-                    lat: '28.64356',
-                    long: '77.16987',
-                    firstName: 'Abraham',
-                    lastName: 'Avins'
-                }, {
-                    Pharmacy: 'y',
-                    Ambulance: 'y',
-                    Government: 'n',
-                    State: 'Uttar Pradesh',
-                    City: 'City10',
-                    lat: '28.65423',
-                    long: '77.17564',
-                    firstName: 'Jacky',
-                    lastName: 'Avins'
-                }, {
-                    Pharmacy: 'n',
-                    Ambulance: 'y',
-                    Government: 'n',
-                    State: 'Himachal Pradesh',
-                    City: 'City7',
-                    lat: '28.65987',
-                    long: '77.26546',
-                    firstName: 'Rob',
-                    lastName: 'Kaneda'
-                }, {
-                    Pharmacy: 'n',
-                    Ambulance: 'n',
-                    Government: 'n',
-                    State: 'Himachal Pradesh',
-                    City: 'City8',
-                    lat: '28.60598',
-                    long: '77.21035',
-                    firstName: 'Ed',
-                    lastName: 'Elias'
-                }, {
-                    Pharmacy: 'n',
-                    Ambulance: 'n',
-                    Government: 'n',
-                    State: 'Himachal Pradesh',
-                    City: 'City9',
-                    lat: '28.65432',
-                    long: '77.23246',
-                    firstName: 'Tommy',
-                    lastName: 'Dougan'
-                }, {
-                    Pharmacy: 'n',
-                    Ambulance: 'n',
-                    Government: 'n',
-                    State: 'Himachal Pradesh',
-                    City: 'City9',
-                    lat: '28.65432',
-                    long: '77.10654',
-                    firstName: 'Rob',
-                    lastName: 'Robinson'
-                }]
+proxy:{
+        type: 'ajax',
+        url: 'app/data/doctor.json',
+        reader: {
+            type: 'json',
+            
+			}
+		}
 }
 });

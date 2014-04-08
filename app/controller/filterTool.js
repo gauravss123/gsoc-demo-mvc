@@ -37,7 +37,9 @@ config: {
       Ext.getCmp('filterListField').setHidden(false);
       Ext.getCmp('clearFilter').setUi('action');
       rec= record.get('text');
+      console.log('this value'+rec);
       fieldName=this.findFieldValue(rec);
+      
       this.checkDuplicateFilter(fieldName,rec);
       this.filterStore();
     },
@@ -45,7 +47,7 @@ config: {
       store = Ext.getCmp('listDocs').getStore();
       filterlistitem=test.utils.Global.getFilterListItem();
       filterlistfield=test.utils.Global.getFilterListItemField();
-      console.log(filterlistfield+' '+filterlistitem)
+      //console.log(filterlistfield+' '+filterlistitem)
       var length = filterlistitem.length;
       for (var i = 0; i < length; i++) {
 	
@@ -53,15 +55,15 @@ config: {
 	};
     },
     findFieldValue:function(rec){
-      
+      console.log(rec+'inside findFieldValue');
 	store = Ext.getCmp('listDocs').getStore();
 	store.clearFilter();
 	if (store.findRecord( 'State', rec  )!=null)
-	  {
+	  { console.log('State');
 	    return('State');
 	  }
 	  else if (store.findRecord( 'City', rec  )!=null)
-	  {
+	  { console.log('City');
 	    return('City');
 	  }
 	  else return -1;
@@ -69,7 +71,7 @@ config: {
      },
      checkDuplicateFilter:function(fieldName,rec){
       stat=0;
-
+	console.log(fieldName+' '+rec);
        if(fieldName==-1&&rec=='Private')
 	{
 	  fieldName='Government';
@@ -120,18 +122,21 @@ config: {
 		    labelWidth:'70%',
 		    listeners:{
 		    change:function(){
+		      
 		      store = Ext.getCmp('listDocs').getStore();
 		      store.clearFilter();
 		      ind=Ext.Array.indexOf(filterlistfield,fieldName);
 		      fieldRec=filterlistitem[ind];
 		      Ext.Array.remove(filterlistfield,fieldName);
 		      Ext.Array.remove(filterlistitem,fieldRec);
-		      console.log(filterlistitem+' '+filterlistfield);
+		      
 		      test.utils.Global.setFilterListItem(filterlistitem);
 		      test.utils.Global.setFilterListItemField(filterlistfield);
 		      if(filterlistitem.length==0)
-		      {Ext.getCmp('filterListField').setHidden(true);
+		      {console.log(Ext.getCmp('listDocs').getStore().isFiltered());
 			
+			Ext.getCmp('filterListField').setHidden(true);
+			Ext.getCmp('clearFilter').setHidden(true);
 		      }
 		      else
 		      {

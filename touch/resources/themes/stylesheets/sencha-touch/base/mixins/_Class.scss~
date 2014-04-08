@@ -424,7 +424,7 @@
     @else if ($name == "star") { @return "S"; }
     @else if ($name == "maps") { @return "@"; }
     @else if ($name == "reply") { @return "R"; }
-
+    @else if ($name == "fforward") { @return "F"; }
 
     @else {
         @return null;

@@ -1,6 +1,14 @@
 Ext.define('test.view.map',{    
   extend:'Ext.Map',  
-  xtype:'map',
+  requires: [
+        'Ext.Map',
+        'Ext.Button',
+        'Ext.Panel',
+        'Ext.Toolbar',
+        'Ext.plugin.google.Traffic',
+        'Ext.plugin.google.Tracker'
+    ],
+ xtype:'map',
  config: {
    layout:'fit',
    id:'maps'
@@ -59,7 +67,7 @@ initialize: function() {
 
                     setTimeout(function() {
                         map.panTo(position);
-                    }, 5000);
+                    }, 7000);
                 }
 
             }

@@ -11,10 +11,11 @@ getPostition: function() {
       
       'Ext.Panel',
       'Ext.Spacer',
-      'Ext.form.FieldSet',
       'test.utils.Global',
-      'test.utils.Global',
-      'Ext.field.Radio',
+      'Ext.carousel.Carousel',
+      'Ext.Img'
+    
+      
     ],
     views:[
       'mainTool',
@@ -26,21 +27,24 @@ getPostition: function() {
       'mapPanel',
       'sortList',
       'intro',
-      'filterList'
+      //'home',
+        'tut',
+      //'services'
     ],
     controllers:[
-      
+      'sortList',		      
       'mainTool',
       'filterTool',
       'listTool',
       'map',
-      'sortList'
+      'sortList',
+      'tut'
       
     ],
     launch : function(){
 	Ext.fly('appLoadingIndicator').destroy();
-        map = Ext.create('test.view.mapPanel');
-	maintool=Ext.create('test.view.mainContainer');
+        map = Ext.create('test.view.tut');
+	//maintool=Ext.create('test.view.mainContainer');
 	Ext.Viewport.add(map);
   }
 });

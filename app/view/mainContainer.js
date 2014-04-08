@@ -1,5 +1,15 @@
 Ext.define('test.view.mainContainer',{
 extend: 'Ext.Container',
+requires : [
+  'Ext.Panel',
+  'test.view.mainTool',
+  'test.view.filterTool',
+  'test.view.listTool',
+  'test.view.infoDisplay',
+  'test.view.sortList',
+  'Ext.Menu',
+  'Ext.form.FieldSet'
+],
 xtype: 'mainCon',
 config:{
   layout:'hbox',
@@ -27,7 +37,7 @@ config:{
 	    ]
         });
   
-    var list = Ext.create('Ext.Panel',{
+  var list = Ext.create('Ext.Panel',{
     flex:1,
     
     layout:'fit',
