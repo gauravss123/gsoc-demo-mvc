@@ -34,7 +34,7 @@ config: {
 		  carousel= Ext.getCmp('carouselTut');
 		  console.log(carousel);
 		  carousel.next();
-		  if(carousel.getActiveIndex()==4)
+		  if(carousel.getActiveIndex()==5)
 		    Ext.getCmp('next').setDisabled(true);
 		}
             },

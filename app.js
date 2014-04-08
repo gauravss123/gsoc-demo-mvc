@@ -13,8 +13,9 @@ getPostition: function() {
       'Ext.Spacer',
       'test.utils.Global',
       'Ext.carousel.Carousel',
-      'Ext.Img'
-    
+      'Ext.Img',
+      'Ext.field.Radio',
+      'Ext.data.amf.XmlEncoder'
       
     ],
     views:[
@@ -29,7 +30,9 @@ getPostition: function() {
       'intro',
       'home',
       'tut',
-      'main'
+      'main',
+      'addoc',
+      'addocList'
       //'services'
     ],
     controllers:[
@@ -40,13 +43,17 @@ getPostition: function() {
       'map',
       'sortList',
       'tut',
-      'home'
+      'home',
+      'addoc'
       
     ],
     launch : function(){
 	Ext.fly('appLoadingIndicator').destroy();
-        map = Ext.create('test.view.mapPanel');
+	map = Ext.create('test.view.map');
+	docadd=Ext.create('test.view.addoc');
 	maintool=Ext.create('test.view.main');
 	Ext.Viewport.add(map);
+	Ext.Viewport.add(docadd);
+	
   }
 });

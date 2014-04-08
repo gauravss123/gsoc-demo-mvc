@@ -9,7 +9,7 @@ Ext.define('test.view.tut',{
        items=[];
 
         //now we loop through each of the categories
-        for (i = 1,ln = 6; i <= ln; i++) {
+        for (i = 1,ln = 7; i <= ln; i++) {
             //items = [];
                 items.push({
                     xtype: 'image',

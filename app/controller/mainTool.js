@@ -6,11 +6,15 @@ config: {
             filterBut: '#filter1',
 	    tutBut:'#tutMain',
 	    homeBut:'#homeMain',
+	    addoc:'#addDoct',
 	    search:'#mainSearch',
 	   
             
         },
         control: {
+	  addoc:{
+	    tap:'showAdd'
+	  },
             filterBut: {
                 tap: "showFilter"
             },
@@ -29,10 +33,14 @@ config: {
     
 	
     }},
+    showAdd:function(){
+      Ext.getCmp('addocPanel').setHidden(false);
+    },
     
     showFilter: function(){
-        
-	Ext.getCmp('filterbar').setHidden(false);
+        var hid=Ext.getCmp('filterbar').getHidden();
+	hid=(!hid)
+	Ext.getCmp('filterbar').setHidden(hid);
 	if(Ext.getCmp('listDocs').getStore().isFiltered())
 	{Ext.getCmp('clearFilter').setHidden(false);
 	  Ext.getCmp('clearFilter').setUi('action');

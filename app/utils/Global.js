@@ -5,7 +5,11 @@ Ext.define('test.utils.Global', {
             position: new google.maps.LatLng(37.44885, -122.158592),
             title:'Title',
 	    filterListItem:[],
-	    filterListItemField:[]
+	    filterListItemField:[],
+	    authAnswer:'',
+	    set:0,
+	    storeName:'',
+	    id:''
     },
     constructor: function(config) {
         this.initConfig(config);

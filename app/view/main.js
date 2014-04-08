@@ -8,6 +8,7 @@ Ext.define('test.view.main',{
    {xtype:'home'},
    {xtype:'mainCon'},
    {xtype:'tutorial'},
+   
     ]	
   }
   

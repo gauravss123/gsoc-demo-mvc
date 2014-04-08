@@ -39,6 +39,13 @@ Ext.define('test.view.mainTool',{
 	    qtip:'click to display position on map',
             id:'showOnMap'
           },
+	   {
+            xtype:'button',
+            ui:'action',
+	    text:'Add Doctor',
+            id:'addDoct'
+          },
+          
           {
             xtype:'button',
             ui:'action',
