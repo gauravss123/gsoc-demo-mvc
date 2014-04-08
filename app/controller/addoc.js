@@ -93,7 +93,7 @@ config: {
 			    
 			    this.resetTap();
 			    var num=Ext.data.amf.XmlEncoder.randomInt(1,8);
-			    src='resources/photos/verify'+num;
+			    src='resources/photos/verify'+num+'.jpeg';
 			    Ext.getCmp('authImg').setSrc(src);
 			    test.utils.Global.setAuthAnswer(num);
                         },

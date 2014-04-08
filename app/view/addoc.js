@@ -2,7 +2,7 @@ Ext.define('test.view.addoc',{
   extend:'Ext.Panel',
   initialize:function(){
     var num=Ext.data.amf.XmlEncoder.randomInt(1,8);
-    src='resources/photos/verify'+num;
+    src='resources/photos/verify'+num+'.jpeg';
     Ext.getCmp('authImg').setSrc(src);
     test.utils.Global.setAuthAnswer(num);
     console.log(test.utils.Global.getAuthAnswer());
